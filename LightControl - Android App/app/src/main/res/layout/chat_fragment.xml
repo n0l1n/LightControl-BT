@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context="com.webianks.bluechat.MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="136dp"
+        android:text="@string/speed" />
+
+    <SeekBar
+        android:id="@+id/seekBar_BR"
+        android:layout_width="526dp"
+        android:layout_height="28dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="40dp" />
+
+    <RelativeLayout
+        android:id="@+id/chatLayoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/messageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/message_height_min"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/large_label_margin"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="@dimen/large_label_margin"
+            android:layout_marginBottom="@dimen/large_label_margin"
+            android:background="@drawable/rounded_background"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="5">
+
+            <EditText
+                android:id="@+id/chatInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="60dp"
+                android:layout_weight="5"
+                android:background="@color/transparent"
+                android:hint="@string/write_something"
+                android:textColorHint="@color/grey"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/sendButton"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/large_label_margin"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/selectable_background_rounded"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/sendIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_send_depri" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/modelist"
+        android:layout_width="match_parent"
+        android:layout_height="474dp"
+        android:layout_above="@id/chatLayoutContainer"
+        android:layout_marginBottom="2dp"
+        android:scrollbars="vertical" />
+
+    <Spinner
+        android:id="@+id/color_mode_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="45dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="263dp"
+        android:layout_height="237dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="52dp"
+        android:src="@drawable/ic_color"
+        app:backgroundTint="@android:color/white"
+        app:elevation="6dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar_speed"
+        android:layout_width="526dp"
+        android:layout_height="28dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="-54dp"
+        android:layout_marginEnd="40dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar_BW"
+        android:layout_width="526dp"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginEnd="40dp" />
+
+    <TextView
+        android:id="@+id/title_RW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/black_white" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="195dp"
+        android:text="Brightness" />
+
+
+</RelativeLayout>
